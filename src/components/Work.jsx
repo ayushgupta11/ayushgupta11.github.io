@@ -8,47 +8,51 @@ export default function Work() {
             return img.default
         }
         catch (err) {
-            return images('../static/images/fulls/01.jpg')
+            return null
         }
     }
 
     const worksData = [
         {
-            title: 'Magna sed consequat tempus',
+            title: 'Wall Posts App clone from Facebook',
             refImage: './fulls/01.jpg',
-            desc: 'Lorem ipsum dolor sit amet nisl sed nullam feugiat.',
-            thumbImage: './thumbs/01.jpg'
+            desc: 'A Facebook-like application that lets a user login/signup into the system & add posts to its timeline. Based on MERN Stack along with Web sockets.',
+            thumbImage: './thumbs/01.jpg',
+            link: 'https://github.com/ayushgupta11/wall-posts-facebook'
         },
         {
-            title: 'Magna sed consequat tempus',
+            title: 'E-commerce Application Server',
             refImage: './fulls/02.jpg',
-            desc: 'Lorem ipsum dolor sit amet nisl sed nullam feugiat.',
-            thumbImage: './thumbs/02.jpg'
+            desc: 'A Node.js, Express & MongoDB based server application for e-commerce. Deployed on: https://healthcart-server.herokuapp.com/',
+            thumbImage: './thumbs/02.jpg',
+            link: 'https://github.com/ayushgupta11/ecommerce'
         },
         {
-            title: 'Magna sed consequat tempus',
+            title: 'Todo App',
             refImage: './fulls/03.jpg',
-            desc: 'Lorem ipsum dolor sit amet nisl sed nullam feugiat.',
-            thumbImage: './thumbs/03.jpg'
+            desc: 'Simple Todo App based on Vue.js & Vuex. Used Firebase for deploying the project.',
+            thumbImage: './thumbs/03.jpg',
+            link: 'https://github.com/ayushgupta11/todo-app'
         },
         {
-            title: 'Magna sed consequat tempus',
+            title: 'Monorepo Project Setup for Sharing Components',
             refImage: './fulls/04.jpg',
-            desc: 'Lorem ipsum dolor sit amet nisl sed nullam feugiat.',
-            thumbImage: './thumbs/04.jpg'
+            desc: 'A React-based monorepo architecture project setup for sharing components between multiple applications.',
+            thumbImage: './thumbs/04.jpg',
+            link: 'https://github.com/ayushgupta11/monorepo-components'
         },
-        {
-            title: 'Magna sed consequat tempus',
-            refImage: './fulls/05.jpg',
-            desc: 'Lorem ipsum dolor sit amet nisl sed nullam feugiat.',
-            thumbImage: './thumbs/05.jpg'
-        },
-        {
-            title: 'Magna sed consequat tempus',
-            refImage: './fulls/06.jpg',
-            desc: 'Lorem ipsum dolor sit amet nisl sed nullam feugiat.',
-            thumbImage: './thumbs/06.jpg'
-        }
+        // {
+        //     title: 'Magna sed consequat tempus',
+        //     refImage: './fulls/05.jpg',
+        //     desc: 'Lorem ipsum dolor sit amet nisl sed nullam feugiat.',
+        //     thumbImage: './thumbs/05.jpg'
+        // },
+        // {
+        //     title: 'Magna sed consequat tempus',
+        //     refImage: './fulls/06.jpg',
+        //     desc: 'Lorem ipsum dolor sit amet nisl sed nullam feugiat.',
+        //     thumbImage: './thumbs/06.jpg'
+        // }
     ]
     return (
         <section id="two">
@@ -58,7 +62,7 @@ export default function Work() {
                     worksData.map((item, index) => {
                         return (
                             <article className="col-6 col-12-xsmall work-item" key={index}>
-                                <a href={imageContext(item.refImage)} className="image fit thumb">
+                                <a target="_blank" href={imageContext(item.link)} className="image fit thumb">
                                     <img src={imageContext(item.thumbImage)} alt="" />
                                 </a>
                                 <h3>{item.title}</h3>
@@ -69,7 +73,7 @@ export default function Work() {
                 }
             </div>
             <ul className="actions">
-                <li><a href="#" className="button">Full Portfolio</a></li>
+                <li><a href="https://github.com/ayushgupta11" target="_blank" className="button">Full Portfolio</a></li>
             </ul>
         </section>
     )
