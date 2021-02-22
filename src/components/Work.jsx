@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { db } from '../utils/firebase'
-import { getLinkPreview } from 'link-preview-js';
+// import { getLinkPreview } from 'link-preview-js';
 
 export default function Work() {
     const images = require.context('../static/images/', true);
@@ -19,19 +19,15 @@ export default function Work() {
         db.collection("projects").get().then((querySnapshot) => {
             querySnapshot.forEach((doc) => {
                 let data = doc.data()
-                getLinkPreview(data.link, {
-                    imagesPropertyType: "og", // fetches only open-graph images
-                }).then(d => {
-                    let ogImage = d.favicons[0]
-                    if(data.nongit){
-                        ogImage = d.images[0]
-                    }
-                    data['thumbImage'] = ogImage
-                    data['refImage'] = ogImage
-                    result.push(data)
-                    console.log(d)
-                    setProjects([...result])
-                });
+                let ogImage = 'https://github.githubassets.com/favicons/favicon.svg'
+                if (data.nongit) {
+                    ogImage = data.image
+                }
+                data['thumbImage'] = ogImage
+                data['refImage'] = ogImage
+                result.push(data)
+                // console.log(d)
+                setProjects([...result])
             });
         });
     }, [0])
