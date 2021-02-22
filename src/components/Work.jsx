@@ -54,7 +54,7 @@ export default function Work() {
                 }
             </div>
             <ul className="actions">
-                <li><a href="../static/resume.pdf" target="_blank" className="button">Download Resume</a></li>
+                <li><a href="./resume.pdf" target="_blank" className="button">Download Resume</a></li>
             </ul>
         </section>
     )
