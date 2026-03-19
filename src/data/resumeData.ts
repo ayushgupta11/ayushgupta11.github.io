@@ -131,16 +131,6 @@ export const resumeData: ResumeData = {
       image: aguiProtocolImg,
     },
     {
-      title: 'node-server-gen',
-      description:
-        'A npm module based on Node.js for creating a server for your projects. Similar to create-react-app, it provides basic CLI functionality for bootstrapping Node.js projects with a boilerplate template along with ES6 syntax support.',
-      technologies: ['Node.js', 'CLI', 'ES6', 'npm'],
-      year: '2021',
-      status: 'npm package',
-      link: 'https://www.npmjs.com/package/node-server-gen',
-      image: nodejsImg,
-    },
-    {
       title:
         'Building Real-Time AI Agent UIs with the AG-UI Protocol and agui-hooks',
       description:
@@ -150,6 +140,16 @@ export const resumeData: ResumeData = {
       status: 'blog',
       link: 'https://medium.com/@ayush.gupta.1197/building-real-time-ai-agent-uis-with-the-ag-ui-protocol-and-agui-hooks-14a78a8f7002',
       image: mediumBlogImg,
+    },
+    {
+      title: 'node-server-gen',
+      description:
+        'A npm module based on Node.js for creating a server for your projects. Similar to create-react-app, it provides basic CLI functionality for bootstrapping Node.js projects with a boilerplate template along with ES6 syntax support.',
+      technologies: ['Node.js', 'CLI', 'ES6', 'npm'],
+      year: '2021',
+      status: 'npm package',
+      link: 'https://www.npmjs.com/package/node-server-gen',
+      image: nodejsImg,
     },
   ],
   education: [
