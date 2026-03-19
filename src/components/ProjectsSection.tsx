@@ -19,9 +19,20 @@ export function ProjectsSection({ projects }: ProjectsSectionProps) {
             {/* Project Header */}
             <div className='flex justify-between items-start'>
               <div>
-                <h3 className='text-lg font-medium text-gray-900'>
-                  {project.title}
-                </h3>
+                {project.link ? (
+                  <a
+                    href={project.link}
+                    target='_blank'
+                    rel='noopener noreferrer'
+                    className='text-lg font-medium text-gray-900 hover:underline'
+                  >
+                    {project.title}
+                  </a>
+                ) : (
+                  <h3 className='text-lg font-medium text-gray-900'>
+                    {project.title}
+                  </h3>
+                )}
                 <p className='text-sm text-gray-600'>{project.year}</p>
               </div>
               {project.status && (
@@ -31,20 +42,16 @@ export function ProjectsSection({ projects }: ProjectsSectionProps) {
               )}
             </div>
 
-            {/* Project Image Placeholder */}
-            <div className='aspect-[4/3] bg-gray-50 rounded border flex items-center justify-center'>
-              <div className='text-center text-gray-600 flex'>
-                {/* <div className='w-12 h-12 mx-auto mb-2 bg-gray-100 rounded flex items-center justify-center'>
-                  <span className='text-sm'>📐</span>
-                </div>
-                <p className='text-xs'>Project Image</p> */}
+            {/* Project Image */}
+            {project.image && (
+              <div className='aspect-[4/3] bg-gray-50 rounded border overflow-hidden'>
                 <img
                   src={project.image}
-                  alt='image'
-                  className='w-full h-full aspect-[3/2]'
+                  alt={project.title}
+                  className='w-full h-full object-cover'
                 />
               </div>
-            </div>
+            )}
 
             {/* Project Description */}
             <p className='text-gray-600 text-sm leading-relaxed'>

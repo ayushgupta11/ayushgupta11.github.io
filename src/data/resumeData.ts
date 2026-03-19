@@ -1,4 +1,7 @@
 import type { ResumeData } from '../types/resume'
+import aguiProtocolImg from '../assets/ag-ui-protocol.jpeg'
+import nodejsImg from '../assets/nodejs.jpeg'
+import mediumBlogImg from '../assets/medium-blog.png'
 
 export const resumeData: ResumeData = {
   contactInfo: {
@@ -118,51 +121,35 @@ export const resumeData: ResumeData = {
   ],
   projects: [
     {
-      title: 'Charlie - GenAI Platform',
+      title: 'agui-hooks',
       description:
-        'Scalable GenAI platform for Pfizer supporting 50K+ users with AI-generated marketing content across multiple channels.',
-      technologies: [
-        'React.js',
-        'Node.js',
-        'GraphQL',
-        'AWS Bedrock',
-        'Claude',
-        'TypeScript',
-      ],
-      year: '2024',
-      status: 'Production',
-      image:
-        'https://images.unsplash.com/photo-1677442136019-21780ecad995?w=600&h=400&fit=crop&crop=entropy',
+        'Production-ready React wrapper for the AG-UI (Agent-GUI) protocol — streaming AI agent state to frontends via SSE. Handles lifecycle events, streaming text tokens, tool calls, and arbitrary state patches in real time.',
+      technologies: ['React', 'TypeScript', 'AG-UI Protocol', 'SSE', 'npm'],
+      year: '2025',
+      status: 'npm package',
+      link: 'https://www.npmjs.com/package/agui-hooks',
+      image: aguiProtocolImg,
     },
     {
-      title: 'Kaiser Permanente Health Ecosystem',
+      title: 'node-server-gen',
       description:
-        'Digital health platform serving 10M+ users across all 50 US states with check-in, payment, and telehealth capabilities.',
-      technologies: ['Angular 11', 'Node.js', 'AEM', 'AWS', 'Microservices'],
-      year: '2022-2024',
-      status: 'Production',
-      image:
-        'https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=600&h=400&fit=crop&crop=entropy',
+        'A npm module based on Node.js for creating a server for your projects. Similar to create-react-app, it provides basic CLI functionality for bootstrapping Node.js projects with a boilerplate template along with ES6 syntax support.',
+      technologies: ['Node.js', 'CLI', 'ES6', 'npm'],
+      year: '2021',
+      status: 'npm package',
+      link: 'https://www.npmjs.com/package/node-server-gen',
+      image: nodejsImg,
     },
     {
-      title: 'Dow Jones Subscription Platform',
+      title:
+        'Building Real-Time AI Agent UIs with the AG-UI Protocol and agui-hooks',
       description:
-        'Cloud-native subscription and newsletter platform for WSJ, Factiva, and PEN with serverless architecture.',
-      technologies: ['React.js', 'Next.js', 'AWS Lambda', 'GraphQL', 'MongoDB'],
-      year: '2021-2022',
-      status: 'Production',
-      image:
-        'https://images.unsplash.com/photo-1504711434969-e33886168f5c?w=600&h=400&fit=crop&crop=entropy',
-    },
-    {
-      title: 'Self-Service BI Platform',
-      description:
-        'Business intelligence platform enabling users to create datasets, models, and dashboards with real-time synchronization.',
-      technologies: ['React.js', 'Node.js', 'MongoDB', 'WebSockets', 'Vue.js'],
-      year: '2018-2020',
-      status: 'Production',
-      image:
-        'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&h=400&fit=crop&crop=entropy',
+        'How we went from disconnected chatboxes to a fully event-driven AI frontend ecosystem. A deep dive into the AG-UI protocol and how agui-hooks bridges AI agents with React frontends.',
+      technologies: ['AG-UI Protocol', 'React', 'SSE', 'AI Agents'],
+      year: '2025',
+      status: 'blog',
+      link: 'https://medium.com/@ayush.gupta.1197/building-real-time-ai-agent-uis-with-the-ag-ui-protocol-and-agui-hooks-14a78a8f7002',
+      image: mediumBlogImg,
     },
   ],
   education: [
